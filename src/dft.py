@@ -62,6 +62,24 @@ class Graph:
 
     # DFT
     def dft(self, starting_vertex_id):
-        pass
+        # create empty stack push the starting vertex id
+        s = Stack()
+        s.push(starting_vertex_id)
+        # create a set to store our visited vertices
+        visited = set()
+
+        # while stack is not empty (len greater than 0)
+        while s.size() > 0:
+            # pop the first vertex
+            v = s.pop()
+            # if that vertex has not been visited
+            if v not in visited:
+                # mark as visited and print for debugging
+                visited.add(v)
+                print(v) # for debugging
+                # iterate over the child vertices of the current vertex
+                for next_vertex in self.vertices[v]:
+                    # push the next vertex
+                    s.push(next_vertex)
 
     
