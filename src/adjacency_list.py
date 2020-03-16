@@ -12,4 +12,15 @@ class Graph:
 
     # add edges
     def add_edge(self, v1, v2):
-       pass
+        # check that v1 and v2 exist in the vertices dictionary
+        if v1 in self.vertices and v2 in self.vertices:
+            # add v2 to the vertices at v1
+            self.vertices[v1].add(v2)
+        # otherwise
+        else:
+            # raise and exception and give an error
+            raise IndexError("That vertex does not exist")
+
+    # get neighbors
+    def get_neighbors(self, vertex_id):
+        return self.vertices[vertex_id]
