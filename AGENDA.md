@@ -8,6 +8,6 @@
     - Why are we storing the adjacency list in a set?
 - BFT and DFT Review [I DO]
 - 5 min break
-- BFT Iplementation [WE DO]
+- BFT Implementation [WE DO]
 - Convert BFT to DFT [WE DO]
 - Wrap up
