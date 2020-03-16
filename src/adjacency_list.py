@@ -3,11 +3,12 @@ class Graph:
 
     # constructor
     def __init__(self):
-        pass
+        self.vertices = {} # adjacency list (dictionary)
+        # self.vertices = [[],[],[]] # adjacency matrix (2d list or array)
 
     # add vertex
     def add_vertex(self, vertex_id):
-        pass
+        self.vertices[vertex_id] = set()
 
     # add edges
     def add_edge(self, v1, v2):
