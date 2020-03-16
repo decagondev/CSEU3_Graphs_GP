@@ -16,6 +16,8 @@ class Graph:
         if v1 in self.vertices and v2 in self.vertices:
             # add v2 to the vertices at v1
             self.vertices[v1].add(v2)
+            # # add v1 to the vertices at v2 bidirectional or undirected
+            # self.vertices[v2].add(v1)
         # otherwise
         else:
             # raise and exception and give an error
