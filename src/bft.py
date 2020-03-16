@@ -40,4 +40,22 @@ class Graph:
 
     # BFT
     def bft(self, starting_vertex_id):
-        pass
+        # create empty queue enqueue the starting vertex id
+        q = Queue()
+        q.enqueue(starting_vertex_id)
+        # create a set to store our visited vertices
+        visited = set()
+
+        # while queue is not empty (len greater than 0)
+        while q.size() > 0:
+            # dequeue the first vertex
+            v = q.dequeue()
+            # if that vertex has not been visited
+            if v not in visited:
+                # mark as visited and print for debugging
+                visited.add(v)
+                print(v) # for debugging
+                # iterate over the child vertices of the current vertex
+                for next_vertex in self.vertices[v]:
+                    # enqueue the next vertex
+                    q.enqueue(next_vertex)
