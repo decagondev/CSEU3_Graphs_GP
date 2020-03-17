@@ -82,20 +82,49 @@ class Graph:
                     # push the next vertex
                     s.push(next_vertex)
 
-    def bfs(self, starting_vertex_id, target_vertex_id):
-        # Create an empty queue and enqueue A PATH TO the starting vertex ID
-        # Create a Set to store visited vertices
-        # While the queue is not empty...
-            # Dequeue the first PATH eg -> [a, b, c, r, g]
-            # Grab the last vertex from the PATH
-            # If that vertex has not been visited...
-                # CHECK IF IT'S THE TARGET
-                    # IF SO, RETURN PATH
+    def dft_recursive(self, start_vert, visited=None):
+        # if the visited structure is set to None
 
-                # Mark it as visited...
-                # Then add A PATH TO its neighbors to the back of the queue
-                # COPY THE PATH
-                # APPEND THE NEIGHOR TO THE BACK
+            # create a new set for visited
+            
+        
+        # add a starting vertex to the visited set
+        
+        # print the start vertex
+        
+        # loop over every child vertex in vertices set at the start vertex
+        
+            # if child vertex is not in visited
+            
+                # do a recursive call to dft_recursive
+                # using the child vertex and the current visited set as arguments
+        pass
+
+    def bfs(self, starting_vertex_id, target_vertex_id):
+        # create a queue to hold the vertex ids
+
+        # enqueue the start vertex id
+
+        # create an empty visited set
+
+        # while the queue is not empty
+
+            # set vert to the dequeued element
+
+            # if the vert is not in visited
+
+                # if vert is target value
+
+                    # return True
+
+                # add the vert to visited set
+
+                # loop over next vert in the vertices at the index of vert
+
+                    # enqueue the next vert
+
+        # return False
+
         pass
 
     
