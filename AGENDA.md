@@ -13,7 +13,7 @@
 - Wrap up
 
 ## Day 2 Agenda - Breaking down Graph Problems
-- BFS / DFS solution (needed to move forward [I DO]
+- BFS / DFS solution (needed to move forward) [I DO]
 - how to solve any graph problem [WE DO]
 - 5 min break
 - whiteboard challenge [YOU DO]
