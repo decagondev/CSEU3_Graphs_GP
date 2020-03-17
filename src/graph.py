@@ -84,21 +84,24 @@ class Graph:
 
     def dft_recursive(self, start_vert, visited=None):
         # if the visited structure is set to None
-
+        if visited is None:
             # create a new set for visited
+            visited = set()
             
         
         # add a starting vertex to the visited set
+        visited.add(start_vert)
         
         # print the start vertex
+        print(start_vert)
         
         # loop over every child vertex in vertices set at the start vertex
-        
+        for child_vert in self.vertices[start_vert]:
             # if child vertex is not in visited
-            
+            if child_vert not in visited:            
                 # do a recursive call to dft_recursive
                 # using the child vertex and the current visited set as arguments
-        pass
+                self.dft_recursive(child_vert, visited)
 
     def dfs(self, start_vert, target_value, visited=None):
         # if visited is None
@@ -150,35 +153,70 @@ class Graph:
 
     def bfs_path(self, starting_vertex_id, target_value):
         # create a queue
-        
+        q = Queue()
         # enqueue a list holding the starting vertex id
-        
+        q.enqueue([starting_vertex_id])
         # created an empty visited set
+        visited = set()
         
         # while the queue is not empty
-        
+        while q.size() > 0:
             # dequeue to the path
+            path = q.dequeue()
             
             # set a vert to the last item in the path
+            vert = path[-1]
            
             # if vert is not in visited
-            
+            if vert not in visited:
                 # if vert is equal to target value
-                
+                if vert == target_value:
                     # return path
-                    
+                    return path
                 # add vert to visited set
-                
+                visited.add(vert)
                 # loop over next vert in vertices at the index of vert
-                
+                for next_vert in self.vertices[vert]:
                     # set a new path equal to a new list of the path (copy)
-                    
+                    new_path = list(path)
                     # append next vert to new path
-                    
+                    new_path.append(next_vert)
                     # enqueue the new path
-                    
+                    q.enqueue(new_path)
         # return None
-        pass
+        return None
 
     def dfs_path(self, starting_vertex_id, target_value):
-        pass
+        # create a stack
+        s = Stack()
+        # push a list holding the starting vertex id
+        s.push([starting_vertex_id])
+        # created an empty visited set
+        visited = set()
+        
+        # while the stack is not empty
+        while s.size() > 0:
+            # pop to the path
+            path = s.pop()
+            
+            # set a vert to the last item in the path
+            vert = path[-1]
+           
+            # if vert is not in visited
+            if vert not in visited:
+                # if vert is equal to target value
+                if vert == target_value:
+                    # return path
+                    return path
+                # add vert to visited set
+                visited.add(vert)
+                # loop over next vert in vertices at the index of vert
+                for next_vert in self.vertices[vert]:
+                    # set a new path equal to a new list of the path (copy)
+                    new_path = list(path)
+                    # append next vert to new path
+                    new_path.append(next_vert)
+                    # push the new path
+                    s.push(new_path)
+        # return None
+        return None
