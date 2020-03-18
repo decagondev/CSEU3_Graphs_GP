@@ -23,3 +23,6 @@ class Stack():
             return None
     def size(self):
         return len(self.stack)
+
+if __name__ == '__main__':
+    print("this can not be run from command line. please import using `from util import Stack, Queue`")
