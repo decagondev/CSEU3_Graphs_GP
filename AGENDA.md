@@ -29,3 +29,11 @@
 - 5 min break
 - Randomness and Social Networks
 - wrap up
+
+## Day 4 Agenda - Map Traversal
+- Talk a little about Social Graph [I DO]
+- 5 min break
+- Breakdown of the Graph Problem in Social Graph [WE DO]
+- 5 min break
+- Randomness [WE DO]
+- SC Adventure Maze Intro (Wrapup) [I DO]
