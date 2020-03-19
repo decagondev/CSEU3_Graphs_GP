@@ -99,9 +99,8 @@ class SocialGraph:
             vert = path[-1]
             # if vert is not in visited
             if vert not in visited:
-                # when we reach an unvisited user, append the path to the visited dictionary at the key of vert    
-                # add vert to visited set
-                visited.add(vert)
+                # when we reach an unvisited user, append the path to the visited dictionary at the key of vert  
+                visited[vert] = path  
                 # loop over next vert in vertices at the index of vert
                 for neighbor in self.friendships[vert]:
                     # set a new path equal to a new list of the path (copy)
