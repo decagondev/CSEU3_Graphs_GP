@@ -32,8 +32,8 @@
 
 ## Day 4 Agenda - Map Traversal
 - Talk a little about Social Graph [I DO]
-- 5 min break
 - Breakdown of the Graph Problem in Social Graph [WE DO]
 - 5 min break
 - Randomness [WE DO]
+- 5 min break
 - SC Adventure Maze Intro (Wrapup) [I DO]
